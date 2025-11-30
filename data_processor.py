@@ -43,7 +43,6 @@ def align_datasets(df_local, df_global_gold, df_global_usd):
         direction='backward'
     )
 
-    # Hapus baris yang memiliki nilai kosong (NaN)
     df_clean = df_merged.dropna().reset_index(drop=True)
     
     return df_clean
