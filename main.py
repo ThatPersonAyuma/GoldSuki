@@ -22,7 +22,15 @@ def main():
 
         results = model_trainer.train_gold_model(df_clean)
         
-        visualizer.print_metrics(results)
+        # visualizer.print_metrics(results)
+        # Misal hasil dari train_gold_model sudah memisahkan train & test
+
+        # Cetak metrik train
+        visualizer.print_metrics(results['train'], dataset_name="Train")
+
+        # Cetak metrik test
+        visualizer.print_metrics(results['test'], dataset_name="Test")
+
 
         test_dates = df_clean.loc[results['X_test'].index, 'Date']
         visualizer.plot_results(test_dates, results['y_test'], results['y_pred'])

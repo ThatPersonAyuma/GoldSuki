@@ -1,1 +1,5 @@
-pandas numpy yfinance scikit-learn matplotlib
+pandas
+numpy
+yfinance
+scikit-learn
+matplotlib

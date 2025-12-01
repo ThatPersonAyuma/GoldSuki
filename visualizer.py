@@ -51,9 +51,16 @@ def plot_results(dates, y_test, y_pred):
     
     plt.show()
 
-def print_metrics(metrics):
-    """Mencetak metrik evaluasi model."""
-    print("\n--- Metrik Evaluasi Model ---")
+# def print_metrics(metrics):
+#     """Mencetak metrik evaluasi model."""
+#     print("\n--- Metrik Evaluasi Model ---")
+#     print(f"Mean Squared Error (MSE): {format_rupiah(metrics['mse'])}")
+#     print(f"Root Mean Squared Error (RMSE): {format_rupiah(metrics['rmse'])}")
+#     print(f"Mean Absolute Error (MAE): {format_rupiah(metrics['mae'])}")
+#     print(f"R-squared (R2): {metrics['r2']:.4f}")
+def print_metrics(metrics, dataset_name="Test"):
+    """Mencetak metrik evaluasi model untuk dataset tertentu."""
+    print(f"\n--- Metrik Evaluasi Model ({dataset_name}) ---")
     print(f"Mean Squared Error (MSE): {format_rupiah(metrics['mse'])}")
     print(f"Root Mean Squared Error (RMSE): {format_rupiah(metrics['rmse'])}")
     print(f"Mean Absolute Error (MAE): {format_rupiah(metrics['mae'])}")
